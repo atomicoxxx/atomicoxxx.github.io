@@ -1,134 +1,83 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<title></title>
-	
-	<script language="javascript" type="text/javascript" src="/system/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../../theme/startpage.css" />
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="\\scentrais.gbpi.loc\dfs\GAL\userdirs\140791\My Pictures\elric_litle.png">
 
-<div id="header">
-	<div id="logo">
-		<h1>Radio a Martelo</h1>
-		<h2>R&aacute;dio 320 Kbps</h2>
-	</div>
-</div>
+    <title>Teste página inicial</title>
 
-
-<div id="topbar">
-<script type="text/javascript">
-$.getJSON('http://painel.igrsistemas.com/api-json/TmpreE1nPT0rRA==', function(data) {
-
-var status = data.status; // Mostra o status da rádio
-var porta = data.porta; // Mostra a porta da rádio
-var porta_dj = data.porta_dj; // Mostra a porta DJ da rádio
-var ip = data.ip; // Mostra o endereço do servidor da rádio
-var ouvintes_conectados = data.ouvintes_conectados; // Mostra total de ouvintes conectados
-var titulo = data.titulo; // Mostra o nome da rádio
-var plano_ouvintes = data.plano_ouvintes; // Mostra o limite de ouvintes do plano
-var plano_ftp = data.plano_ftp; // Mostra o limite de espaço do AutoDJ do plano
-var plano_bitrate = data.plano_bitrate; // Mostra o bitrate do plano
-var musica_atual = data.musica_atual; // Mostra a música atual
-var proxima_musica = data.proxima_musica; // Mostra a próxima música do AutoDJ(não é valido para transmissão ao vivo)
-var genero = data.genero; // Mostra o genero da rádio
-var shoutcast = data.shoutcast; // Mostra a URL do shoutcast
-var rtmp = data.rtmp; // Mostra a URl do RTMP para uso em players próprios(se tiver RTMP)
-var rtsp = data.rtsp; // Mostra a URl do RTSP para uso em players próprios(se tiver RTMP)
-var capa_musica = data.capa_musica; // Mostra a URL da imagem JPG da capa do album da música
-
-});
-</script>
-
-</div>
-
-
-		<div style="white-space: nowrap; overflow: hidden; margin-right: 8px">
-			Reproduzindo: <a href="/tunein/orlandot.pls" id="cc_strinfo_summary_orlandot" class="cc_streaminfo" style="text-overflow: ellipsis">Loading...</a> (<span id="cc_strinfo_server_orlandot" class="cc_streaminfo"></span>)<br />
-		</div>
-		<script language="javascript" type="text/javascript" src="/system/streaminfo.js"></script>
-
-	</div>
-</div>
-
-
-<div id="container">
-	
-	<div id="leftnav">
-				
-		<h3>Faixas Recentes</h3>
-		
-		<div id="cc_recenttracks_orlandot" class="cc_recenttracks_list">Loading...</div>
-		
-		<script language="javascript" type="text/javascript" src="/system/recenttracks.js"></script>
-		
-	</div>
-	
-	
-	<div id="content">
-				<h3>Player de áudio na Web</h3>
-
-		<div class="block">
-			<div class="content" style="text-align: center; margin: 0 auto 0 auto">
-
-				<div class="cc_player" data-username="orlandot" data-charset="" data-skin="blue.monday.startpage">Loading ...</div>
-
-			</div>
-		</div>
-		<script language="javascript" type="text/javascript" src="/system/player.js"></script>
-
-		
-		<h3>Pedir uma música</h3>
-	
-		<div class="block">
-			<div class="content">
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+  </head>
+<body> 
+<div class="container-fluid">
+	<div class="jumbotron row ">
+		<div class="col-sm-4">
+			<img src="Thor 2.jpg">
+		</div >
+		<div class="col-sm-8">
+			<!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+			<script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+			<script type="text/javascript">
+			MRP.insert({
+			'url':'http://185.118.112.12:8009/stream',
+			'codec':'mp3',
+			'volume':100,
+			'autoplay':true,
+			'forceHTML5':true,
+			'jsevents':true,
+			'buffering':0,
+			'title':'Rádio a Martelo',
+			'welcome':'Toca a Martelar!',
+			'wmode':'transparent',
+			'skin':'simple-blue',
+			'width':300,
+			'height':122
+			});
+			</script>
+			<!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
 			
-				<div id="cc_req_result_orlandot"></div>
-				<form>
-				Artista: <input type="text" id="cc_req_artist_orlandot" name="request[artist]" size="40" maxlength="127" /><br />
-				Música: <input type="text" id="cc_req_title_orlandot" name="request[title]" size="40" maxlength="127" /><br />
-				Dedicado para: <input type="text" id="cc_req_dedi_orlandot" name="request[dedication]" size="40" maxlength="127" /><br />
-				Seu nome: <input type="text" id="cc_req_sender_orlandot" name="request[sender]" size="40" maxlength="127" /><br />
-				Seu E-Mail: <input type="text" id="cc_req_email_orlandot" name="request[email]" size="40" maxlength="127" /><br />
-				<input type="button" id="cc_req_button_orlandot" class="cc_request_form" value="Submeter pedido de música" /><br />
-				</form>			
-			</div>
+	<div class="media">
+    <div class="media-left">
+      <img src="martelo penumatico.jpg" class="img-responsive" style="width:60px">
+    </div>
+    <div class="media-body">
+      	    <div class="col-sm-8">
+		    <!--div class="cc_player col col-sm-8" data-username="orlandot" data-autoplay="1">Carregando ...</div-->
+	    	<!--P class="content"><audio autoplay="1" controls="1">
+			<source src="http://185.118.112.12:8009/stream" type="audio/mpeg"/>
+			</audio></p-->
+		    <span class="cc_streaminfo col col-sm-8" data-type="song" data-username="orlandot">Carregando ...</div>    
+	    </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+		<h2 class="text-center">Passou ainda agora...</h2>
+			<div class="cc_recenttracks_list" data-username="orlandot">Carregando ...</div>
 		</div>
-		<script language="javascript" type="text/javascript" src="/system/request.js"></script>
-		
+		<div class="col-md-6">
+			<h2 class="text-Center">Próximas Emissões Live...</h2>
+			<h4 class="text-Center">Elric...</h4>
+		</div>
 	
-		
-		<h3>Conteúdo On-demand</h3>
-	
-		<div class="block">
-			<div class="content">
-				<div id="cc_ondemand_orlandot" class="cc_ondemand_content">Loading...</div>
-			</div>
-		</div>
-		<script language="javascript" type="text/javascript" src="/system/ondemand.js"></script>
-		
-		
-		
-		<h3>Localização dos Ouvintes Atuais</h3>
-
-		<div class="block">
-			<div id="cc_gmaps_orlandot" class="cc_gmaps_map" style="width: 370px; height: 400px"></div>
-		</div>
-		<script language="javascript" type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
-		<script language="javascript" type="text/javascript" src="/system/googlemaps.js" defer="true"></script>
-		
 
 	</div>
-	
 </div>
-
-<div id="footer">
-	<div class="content">
-		<div style="float: right">Mantido por  <a target="_blank" href="http://www.centova.com">Centova Cast</a></div>
-		Hospedado por WebTuga Streaming
-	</div>
-</div>
-
-</body>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script language="javascript" type="text/javascript" src="http://cast.redewt.net:2199/system/streaminfo.js"></script>
+	<script language="javascript" type="text/javascript" src="http://cast.redewt.net:2199/system/recenttracks.js"></script>
+    </body>
 </html>
