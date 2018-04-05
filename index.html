@@ -40,13 +40,17 @@
 			</script>
 	<!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
 			
+			
 	<div class="media">
     <div class="media-left">
       <img src="martelo penumatico.jpg" class="img-responsive" style="width:60px">
     </div>
     <div class="media-body">
       	    <div class="col-sm-8">
-		    <span class="cc_streaminfo" data-type="song" data-username="orlandot">Carregando ...</span>    
+		   $xml = simplexml_load_file("http://painel.igrsistemas.com/api/TmpreE1nPT0rRA==");
+echo "<br>";
+echo $xml->musica_atual; // Mostra a música atual
+echo "<br>";    
 	    </div>
     </div>
   </div>
