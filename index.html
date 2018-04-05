@@ -47,10 +47,20 @@
     </div>
     <div class="media-body">
       	    <div class="col-sm-8">
-		   $xml = simplexml_load_file("http://painel.igrsistemas.com/api/TmpreE1nPT0rRA==");
-echo "<br>";
-echo $xml->musica_atual; // Mostra a música atual
-echo "<br>";    
+		    <p id="teste"> Teste retorno músicas</p>  
+			<script type="text/javascript">
+			$.getJSON('http://painel.igrsistemas.com/api-json/Vkcxd2NtVkZNVzVRVkRBOStS', function(data) {
+			var items = [];
+			  $.each( data, function( key, val ) {
+			    items.push( "<li id='" + key + "'>" + val + "</li>" );
+			  });
+
+			  $( "<ul/>", {
+			    "class": "my-new-list",
+			    html: items.join( "" )
+			  }).appendTo( "teste" );
+			});
+			</script>
 	    </div>
     </div>
   </div>
