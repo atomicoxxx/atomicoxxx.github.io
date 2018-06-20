@@ -49,7 +49,7 @@
       	    <div class="col-sm-8" id='lista'>
 		    <p id="teste"> Teste retorno músicas</p>  
 			<script type="text/javascript">
-			$.getJSON('http://painel.igrsistemas.com/api-json/Vkcxd2NtVkZNVzVRVkRBOStS', function(data) {
+			$.getJSON('http://painel.igrsistemas.com/api-json/NjkxMisw', function(data) {
 			var items = [];
 			  $.each( data, function( key, val ) {
 			    items.push( "<li id='" + key + "'>" + val + "</li>" );
@@ -62,12 +62,13 @@
 			});
 			</script>
 		   
-
+		    <h1> Lista</h1>
+		    <a href="http://painel.igrsistemas.com/api/NjkxMisw"></a>
 	    </div>
 	    <div class="col-sm-4">
 		 
 		 <script type="text/javascript">
-		$.getJSON('http://painel.igrsistemas.com/api-json/Vkcxd2NtVkZNVzVRVkRBOStS', function(data) {
+		$.getJSON('http://painel.igrsistemas.com/api-json/NjkxMisw', function(data) {
 
 		var status = data.status; // Mostra o status da rádio
 		var porta = data.porta; // Mostra a porta da rádio
