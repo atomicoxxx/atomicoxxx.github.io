@@ -61,6 +61,63 @@
 			  }).appendTo( "body" );
 			});
 			</script>
+		    <script type="text/javascript">
+		$.getJSON('http://painel.igrsistemas.com/api-json/Vkcxd2NtVkZNVzVRVkRBOStS', function(data) {
+
+		var status = data.status; // Mostra o status da rádio
+		var porta = data.porta; // Mostra a porta da rádio
+		var porta_dj = data.porta_dj; // Mostra a porta DJ da rádio
+		var ip = data.ip; // Mostra o endereço do servidor da rádio
+		var ouvintes_conectados = data.ouvintes_conectados; // Mostra total de ouvintes conectados
+		var titulo = data.titulo; // Mostra o nome da rádio
+		var plano_ouvintes = data.plano_ouvintes; // Mostra o limite de ouvintes do plano
+		var plano_ftp = data.plano_ftp; // Mostra o limite de espaço do AutoDJ do plano
+		var plano_bitrate = data.plano_bitrate; // Mostra o bitrate do plano
+		var musica_atual = data.musica_atual; // Mostra a música atual
+		var proxima_musica = data.proxima_musica; // Mostra a próxima música do AutoDJ(não é valido para transmissão ao vivo)
+		var genero = data.genero; // Mostra o genero da rádio
+		var shoutcast = data.shoutcast; // Mostra a URL do shoutcast
+		var rtmp = data.rtmp; // Mostra a URl do RTMP para uso em players próprios(se tiver RTMP)
+		var rtsp = data.rtsp; // Mostra a URl do RTSP para uso em players próprios(se tiver RTMP)
+		var capa_musica = data.capa_musica; // Mostra a URL da imagem JPG da capa do album da música
+
+		});
+		</script>
+
+	    </div>
+	    <div class="col-sm-4">
+		    $xml = simplexml_load_file("http://painel.igrsistemas.com/api/Vkcxd2NtVkZNVzVRVkRBOStS");
+		echo $xml->status; // Mostra o status da rádio
+		echo "<br>";
+		echo $xml->porta; // Mostra a porta da rádio
+		echo "<br>";
+		echo $xml->porta_dj; // Mostra a porta DJ da rádio
+		echo "<br>";
+		echo $xml->ip; // Mostra o endereço do servidor da rádio
+		echo "<br>";
+		echo $xml->ouvintes_conectados; // Mostra total de ouvintes conectados
+		echo "<br>";
+		echo $xml->titulo; // Mostra o nome da rádio
+		echo "<br>";
+		echo $xml->plano_ouvintes; // Mostra o limite de ouvintes do plano
+		echo "<br>";
+		echo $xml->plano_ftp; // Mostra o limite de espaço do AutoDJ do plano
+		echo "<br>";
+		echo $xml->plano_bitrate; // Mostra o bitrate do plano
+		echo "<br>";
+		echo $xml->musica_atual; // Mostra a música atual
+		echo "<br>";
+		echo $xml->proxima_musica; // Mostra a próxima música do AutoDJ(não é valido para transmissão ao vivo)
+		echo "<br>";
+		echo $xml->genero; // Mostra o genero da rádio
+		echo "<br>";
+		echo $xml->shoutcast; // Mostra a URL do shoutcast
+		echo "<br>";
+		echo $xml->rtmp; // Mostra a URl do RTMP para uso em players próprios(se tiver RTMP)
+		echo "<br>";
+		echo $xml->rtsp; // Mostra a URl do RTSP para uso em players próprios(se tiver RTMP)
+		echo "<br>";
+		echo $xml->capa_musica; // Mostra a URL da imagem JPG da capa do album da música
 	    </div>
     </div>
   </div>
