@@ -23,7 +23,7 @@
 			<script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
 			<script type="text/javascript">
 			MRP.insert({
-			'url':'http://185.118.112.12:8009/stream',
+			'url':'http://stm13.igrsistemas.com:6912',
 			'codec':'mp3',
 			'volume':100,
 			'autoplay':true,
@@ -46,7 +46,7 @@
       <img src="martelo penumatico.jpg" class="img-responsive" style="width:60px">
     </div>
     <div class="media-body">
-      	    <div class="col-sm-8">
+      	    <div class="col-sm-8" id='lista'>
 		    <p id="teste"> Teste retorno músicas</p>  
 			<script type="text/javascript">
 			$.getJSON('http://painel.igrsistemas.com/api-json/Vkcxd2NtVkZNVzVRVkRBOStS', function(data) {
@@ -58,10 +58,15 @@
 			  $( "<ul/>", {
 			    "class": "my-new-list",
 			    html: items.join( "" )
-			  }).appendTo( "body" );
+			  }).appendTo( "lista" );
 			});
 			</script>
-		    <script type="text/javascript">
+		   
+
+	    </div>
+	    <div class="col-sm-4">
+		 
+		 <script type="text/javascript">
 		$.getJSON('http://painel.igrsistemas.com/api-json/Vkcxd2NtVkZNVzVRVkRBOStS', function(data) {
 
 		var status = data.status; // Mostra o status da rádio
@@ -83,41 +88,6 @@
 
 		});
 		</script>
-
-	    </div>
-	    <div class="col-sm-4">
-		    $xml = simplexml_load_file("http://painel.igrsistemas.com/api/Vkcxd2NtVkZNVzVRVkRBOStS");
-		echo $xml->status; // Mostra o status da rádio
-		echo "<br>";
-		echo $xml->porta; // Mostra a porta da rádio
-		echo "<br>";
-		echo $xml->porta_dj; // Mostra a porta DJ da rádio
-		echo "<br>";
-		echo $xml->ip; // Mostra o endereço do servidor da rádio
-		echo "<br>";
-		echo $xml->ouvintes_conectados; // Mostra total de ouvintes conectados
-		echo "<br>";
-		echo $xml->titulo; // Mostra o nome da rádio
-		echo "<br>";
-		echo $xml->plano_ouvintes; // Mostra o limite de ouvintes do plano
-		echo "<br>";
-		echo $xml->plano_ftp; // Mostra o limite de espaço do AutoDJ do plano
-		echo "<br>";
-		echo $xml->plano_bitrate; // Mostra o bitrate do plano
-		echo "<br>";
-		echo $xml->musica_atual; // Mostra a música atual
-		echo "<br>";
-		echo $xml->proxima_musica; // Mostra a próxima música do AutoDJ(não é valido para transmissão ao vivo)
-		echo "<br>";
-		echo $xml->genero; // Mostra o genero da rádio
-		echo "<br>";
-		echo $xml->shoutcast; // Mostra a URL do shoutcast
-		echo "<br>";
-		echo $xml->rtmp; // Mostra a URl do RTMP para uso em players próprios(se tiver RTMP)
-		echo "<br>";
-		echo $xml->rtsp; // Mostra a URl do RTSP para uso em players próprios(se tiver RTMP)
-		echo "<br>";
-		echo $xml->capa_musica; // Mostra a URL da imagem JPG da capa do album da música
 	    </div>
     </div>
   </div>
