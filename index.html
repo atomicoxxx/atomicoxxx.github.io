@@ -19,27 +19,9 @@
 			<img src="Thor 2.jpg">
 		</div >
 		<div class="col-sm-8">
-		    <!--PLAYER DA MUSES<-->
-			<script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
-			<script type="text/javascript">
-			MRP.insert({
-			'url':'87.117.208.118:19520/;',
-			'codec':'mp3',
-			'volume':100,
-			'autoplay':true,
-			'forceHTML5':true,
-			'jsevents':true,
-			'buffering':0,
-			'title':'Rádio a Martelo',
-			'welcome':'Toca a Martelar',
-			'wmode':'transparent',
-			'skin':'player-stm',
-			'width':128,
-			'height':30
-			});
-			</script>
-	<!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
-			
+		    <style>audio::-webkit-media-controls-timeline { display:none;}</style>
+			<audio autoplay controls="controls" src="http://stm13.igrsistemas.com:6912/;"></audio>
+		
 			
 	<div class="media">
     <div class="media-left">
@@ -48,48 +30,34 @@
     <div class="media-body">
       	    <div class="col-sm-8" id='lista'>
 		    <p id="teste"> Teste retorno músicas</p>  
-			<script type="text/javascript">
-			$.getJSON('http://painel.igrsistemas.com/api-json/NjkxMisw', function(data) {
-			var items = [];
-			  $.each( data, function( key, val ) {
-			    items.push( "<li id='" + key + "'>" + val + "</li>" );
-			  });
+			
 
-			  $( "<ul/>", {
-			    "class": "my-new-list",
-			    html: items.join( "" )
-			  }).appendTo( "lista" );
-			});
-			</script>
-		   
-		    <h1> Lista</h1>
-		    <a href="http://painel.igrsistemas.com/api/NjkxMisw"></a>
 	    </div>
 	    <div class="col-sm-4">
 		 
-		 <script type="text/javascript">
-		$.getJSON('http://painel.igrsistemas.com/api-json/NjkxMisw', function(data) {
+<script type="text/javascript">
+$.getJSON('http://painel.igrsistemas.com/api-json/Vkcxd2NtVkZNVzVRVkRBOStS', function(data) {
 
-		var status = data.status; // Mostra o status da rádio
-		var porta = data.porta; // Mostra a porta da rádio
-		var porta_dj = data.porta_dj; // Mostra a porta DJ da rádio
-		var ip = data.ip; // Mostra o endereço do servidor da rádio
-		var ouvintes_conectados = data.ouvintes_conectados; // Mostra total de ouvintes conectados
-		var titulo = data.titulo; // Mostra o nome da rádio
-		var plano_ouvintes = data.plano_ouvintes; // Mostra o limite de ouvintes do plano
-		var plano_ftp = data.plano_ftp; // Mostra o limite de espaço do AutoDJ do plano
-		var plano_bitrate = data.plano_bitrate; // Mostra o bitrate do plano
-		var musica_atual = data.musica_atual; // Mostra a música atual
-		var proxima_musica = data.proxima_musica; // Mostra a próxima música do AutoDJ(não é valido para transmissão ao vivo)
-		var genero = data.genero; // Mostra o genero da rádio
-		var shoutcast = data.shoutcast; // Mostra a URL do shoutcast
-		var rtmp = data.rtmp; // Mostra a URl do RTMP para uso em players próprios(se tiver RTMP)
-		var rtsp = data.rtsp; // Mostra a URl do RTSP para uso em players próprios(se tiver RTMP)
-		var capa_musica = data.capa_musica; // Mostra a URL da imagem JPG da capa do album da música
+var status = data.status; // Mostra o status da rádio
+var porta = data.porta; // Mostra a porta da rádio
+var porta_dj = data.porta_dj; // Mostra a porta DJ da rádio
+var ip = data.ip; // Mostra o endereço do servidor da rádio
+var ouvintes_conectados = data.ouvintes_conectados; // Mostra total de ouvintes conectados
+var titulo = data.titulo; // Mostra o nome da rádio
+var plano_ouvintes = data.plano_ouvintes; // Mostra o limite de ouvintes do plano
+var plano_ftp = data.plano_ftp; // Mostra o limite de espaço do AutoDJ do plano
+var plano_bitrate = data.plano_bitrate; // Mostra o bitrate do plano
+var musica_atual = data.musica_atual; // Mostra a música atual
+var proxima_musica = data.proxima_musica; // Mostra a próxima música do AutoDJ(não é valido para transmissão ao vivo)
+var genero = data.genero; // Mostra o genero da rádio
+var shoutcast = data.shoutcast; // Mostra a URL do shoutcast
+var rtmp = data.rtmp; // Mostra a URl do RTMP para uso em players próprios(se tiver RTMP)
+var rtsp = data.rtsp; // Mostra a URl do RTSP para uso em players próprios(se tiver RTMP)
+var capa_musica = data.capa_musica; // Mostra a URL da imagem JPG da capa do album da música
 
-		});
-		</script>
-	    </div>
+});
+</script>
+
     </div>
   </div>
 </div>
